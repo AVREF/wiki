@@ -1,0 +1,16 @@
+Wiki
+
+File :
+- title
+- content
+- keywords
+
+Interfaces :
+- search page
+- result page
+- file page
+
+Function
+- search for similar results (title + keywords)
+- display content of a file (word, google doc, pdf, txt)
+- upload file 

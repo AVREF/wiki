@@ -1,0 +1,20 @@
+{
+  "name": "wiki",
+  "version": "1.0.0",
+  "description": "search tool for know how",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "keywords": [
+    "wiki"
+  ],
+  "author": "Antoine Vermare",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^8.2.0"
+  },
+  "dependencies": {
+    "electron-json-storage": "^4.1.8"
+  }
+}
