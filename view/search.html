@@ -3,22 +3,37 @@
 <head>
   <meta charset="utf-8">
   <title>Titre de la page</title>
-  <link rel="stylesheet" href="css/style.css">
-  <script src="js/communicate.js"></script>
+  <link rel="stylesheet" href="./css/datatable.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <link  href="./css/viewerjs.css" rel="stylesheet">
 </head>
+
 <body id="body">
+  <div class="upload-popup" >
+    <button class="close" >Back</button>
+    <form action="" method="post" enctype="multipart/form-data" class="upload-input">
+      <input type="file" id="file" name="file" />
+      <input type="text" name="title" placeholder="Title of the article"/>
+      <input type="text" name="meta1" placeholder="#keywork 1"/>
+      <input type="text" name="meta2" placeholder="#keywork 2"/>
+      <input type="text" name="meta3" placeholder="#keywork 3"/>
+      <input type="text" name="meta4" placeholder="#keywork 4"/>
+      <input type="text" name="meta5" placeholder="#keywork 5"/>
+      <input type="submit" name="submit" value="Submit"/>
+    </form>
+  </div>
   <div class="header" >
-    <div class="wrap">
+    <div class="search-wrap">
       <div class="search">
-        <input type="text" class="searchTerm" placeholder="What are you looking for?">
-        <button type="submit" class="searchButton">
-          <i class="fa fa-search"></i>
-        </button>
+        <input type="search" class="searchTerm" placeholder="" aria-controls="content" id="search">
       </div>
+    </div>
+    <div class="upload-wrap">
+      <button class="upload">Add file</button>
     </div>
   </div>
   <div class="content">
-
+    <table id="content" class="display" style="width:100%"></table>
   </div>
   <div class="footer" >
     <div class="meta-one" >
@@ -28,5 +43,11 @@
     <div class="meta-three" >
     </div>
   </div>
+
+  <script>window.$ = window.jQuery = require('jquery');</script>
+  <script src="./js/datatable.js"></script>
+  <script src="./js/fancy.js"></script>
+  <script src="./js/communicate.js"></script>
+  <script src="./js/viewerjs.js"></script>
 </body>
 </html>

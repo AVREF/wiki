@@ -3,25 +3,30 @@
 html{
   display: block;
   margin: 0;
-  width: 100%;
-  height: 100%;
+  width: 800px;
+  height: 800px;
 }
 
 body{
+  z-index: 500;
   background: #f2f2f2;
   font-family: 'Open Sans', sans-serif;
   display: grid;
-  grid-template-columns: 33% 33% 33%;
+  grid-template-columns: 30% 30% 40%;
   grid-template-rows: 10% 80% 10%;
   margin: 0;
-  width: 100%;
-  height: 100%;
+  width: 800px;
+  height: 800px;
   overflow: hidden;
 }
 
 .header{
   grid-column: 1/4;
   grid-row: 1;
+  margin:0;
+  border: solid 1px black;
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
 }
 .content{
   grid-column: 1/4;
@@ -33,44 +38,121 @@ body{
   grid-row: 3;
 }
 
-.search {
+/* .search {
   width: 100%;
   position: relative;
   display: flex;
+} */
+
+.upload{
+  border-radius: 10%;
+  height: 100%;
+  width : 90%;
+  display: inline-block;
+    border: none;
+    padding: 1rem 2rem;
+    margin: 0;
+    text-decoration: none;
+    background: rgba(0,0,0,0);
+    font-family: sans-serif;
+    font-size: 1rem;
+    cursor: pointer;
+    text-align: center;
+    transition: background 250ms ease-in-out,
+                transform 150ms ease;
+    -webkit-appearance: none;
+    -moz-appearance: none;
 }
 
-.searchTerm {
+.upload-wrap{
+  display: inline-block;
+  position: relative;
+  grid-column: 3/4;
+  border-left: solid 1px grey;
+}
+
+.search{
+  width: 99%;
+  position: relative;
+  display: flex;
+  float: left;
+  height: 100%;
+}
+.search > input{
   width: 100%;
-  border: 3px solid #00B4CC;
-  border-right: none;
-  padding: 5px;
-  height: 20px;
-  border-radius: 5px 0 0 5px;
-  outline: none;
-  color: #9DBFAF;
-}
-
-.searchTerm:focus{
-  color: #00B4CC;
-}
-
-.searchButton {
-  width: 40px;
-  height: 36px;
-  border: 1px solid #00B4CC;
-  background: #00B4CC;
-  text-align: center;
-  color: #fff;
-  border-radius: 0 5px 5px 0;
-  cursor: pointer;
-  font-size: 20px;
+  background: none;
+  border: none
 }
 
 /*Resize the wrap to see the search bar change!*/
-.wrap{
-  width: 30%;
+.search-wrap{
+  margin: 0;
+  display: inline-block;
+  grid-column: 1/3;
   position: relative;
+}
+
+.upload-popup{
+  display: block;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  display: block;
+  background: grey;
+  filter: blur(1000);
+  z-index: 1000;
+  align-items: center;
+}
+
+.upload-input{
+  display: block;
+  position: absolute;
   top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  left: 60%;
+  height: 30%;
+  width: 30%;
+  margin: -15% 0 0 -25%;
+}
+
+.close{
+  position: fixed;
+  right: 0;
+  top:0;
+}
+
+.show-alert{
+  display: block;
+  height: 100px;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  border: solid 1px blue;
+}
+
+.title{
+  display: inline-block;
+  width: 50%;
+  margin: 0;
+  float: left;
+  height: 45px;
+}
+
+.meta{
+  border: solid 1px grey;
+  display: inline-block;
+  width: 7%;
+  margin: 0;
+  float: right;
+  height: 45px;
+}
+
+.row:first-of-type{
+  display: none;
+}
+
+a{
+  display: block;
+  width: 100%;
+  height: 100%;
+  z-index: 10000;
 }
